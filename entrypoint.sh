@@ -1,4 +1,4 @@
- #!/bin/sh -l
+#!/bin/sh -l
 
 cd $GITHUB_WORKSPACE
 
