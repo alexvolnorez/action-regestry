@@ -1,0 +1,15 @@
+name: 'Storybook Publisher'
+description: 'Publish a Storybook Site to GitHub Pages'
+inputs:
+  data:
+    description: 'The URL for the vault endpoint'
+    required: true
+  path:
+    description: 'A semicolon-separated list of secrets to retrieve. These will automatically be converted to environmental variable keys. See README for more details'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.data }}
